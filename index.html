@@ -63,12 +63,23 @@
                 </div>
               <!-- three card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                  <figure><img src=".//images/triangle.png" alt="Shoes" /></figure>
+                  <figure><img src=".//images/parallelogram.png" alt="" /></figure>
                   <div class="card-body">
-                    <h2 class="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <h2 class="card-title">Parallelogram</h2>
+                    <p>Area (A) = W X i</p>
+                    <p>
+                      <!-- base -->
+                      <input type="text" class="border w-28 bg-gray-200 text-xl px-2" name="" placeholder="base" id="parallelogram-base">
+                      <span class="ml-2">cm</span>
+                      <!-- height -->
+                      <input type="text" class="border w-28 bg-gray-200 text-xl px-2" name="" placeholder="Height" id="parallelogram-Height">
+                      <span class="ml-2">cm</span>
+                    
+                    </p>
+                    <p class="text-4xl font-bold">Area : <span id="parallelogram-Area"></span> cm<sup>2</sup></p>
+
                     <div class="card-actions justify-end">
-                      <button class="btn btn-primary">Buy Now</button>
+                      <button onclick="parallelogramArea()" class="btn btn-primary w-full">calculate</button>
                     </div>
                   </div>
                 </div>
@@ -83,6 +94,7 @@
 
     <script src="scripts/area-calculator.js"></script>
     <script src="new.js"></script>
+    <script src="scripts/sharedStyle.js"></script>
 </body>
 
 </html>
