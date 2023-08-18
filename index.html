@@ -1,56 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>My Bank</title>
-     <script src="https://cdn.tailwindcss.com"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-     <header>
-          <h1 class="text-5xl text-center mt-4 text-red-300 font-bold">Functional <span class="font-extrabold text-red-400">Baap-Er-Bank</span> !!!</h1>
-     </header>
-     <!-- main section start from here -->
-     <main>
-          <section class=" mt-8">
-               <div class=" grid grid-cols-3 gap-4 w-3/4 mx-auto">
-                    <div class="bg-cyan-300 p-8 rounded-xl">
-                         <h1 class="text-2xl text-white">Deposit</h1>
-                         <h2 class="text-5xl text-white">$<span id="total-deposit">00</span></h2>
 
+<body>
+  <header>
+
+  </header>
+  <main>
+      <!-- container -->
+      <div class="flex flex-col lg:flex-row mt-10">
+        <!-- shape container -->
+            <div class="flex-1 grid grid-cols-1 md:gird-cols-2 lg:grid-cols-3 gap-6">
+              <!-- first card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                  <figure><img src=".//images/triangle.png" alt="Shoes" /></figure>
+                  <div class="card-body">
+                    <h2 class="card-title">Triangle</h2>
+                    <p>Area (A) = 0.5 X b X h</p>
+                    <p>
+                          <!-- base -->
+                      <input type="text" class="border w-28 bg-gray-200 text-xl px-2" name="" placeholder="base" id="base-Field">
+                      <span class="ml-2">cm</span>
+                      <!-- height -->
+                      <input type="text" class="border w-28 bg-gray-200 text-xl px-2" name="" placeholder="height" id="height-Field">
+                      <span class="ml-2">cm</span>
+                      
+                    </p>
+                    <p class="text-4xl font-bold">Area : <span id="triangle-Area"></span> cm<sup>2</sup></p>
+                    <div class="card-actions justify-end">
+                      <button onclick="calculateTargetArea()" class="btn btn-primary w-full">calculate</button>
                     </div>
-                    <div class="bg-cyan-400 p-8 rounded-xl">
-                         <h1 class="text-2xl text-white">Withdraw</h1>
-                         <h2 class="text-5xl text-white">$<span id="my-withdraw">00</span></h2>
+                  </div>
+                </div>
+              <!-- second card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                  <figure><img src="./images/rectangle.png" alt="Shoes" /></figure>
+                  <div class="card-body">
+                    <h2 class="card-title">Rectangle</h2>
+                    <p>Area (A) = W X i</p>
+                    <p>
+                      <!-- base -->
+                      <input type="text" class="border w-28 bg-gray-200 text-xl px-2" name="" placeholder="width" id="rectangle-width">
+                      <span class="ml-2">cm</span>
+                      <!-- height -->
+                      <input type="text" class="border w-28 bg-gray-200 text-xl px-2" name="" placeholder="length" id="rectangle-length">
+                      <span class="ml-2">cm</span>
                     
+                    </p>
+                    <p class="text-4xl font-bold">Area : <span id="rectangle-Area"></span> cm<sup>2</sup></p>
+
+                    <div class="card-actions justify-end">
+                      <button onclick="calculateRectangleArea()" class="btn btn-primary w-full">Calculate</button>
                     </div>
-                    <div class="bg-cyan-300 p-8 rounded-xl">
-                         <h1 class="text-2xl text-white">Balance</h1>
-                         <h2 class="text-5xl text-white">$<span id="total-Balance">1200</span></h2>
-                    
+                  </div>
+                </div>
+              <!-- three card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                  <figure><img src=".//images/triangle.png" alt="Shoes" /></figure>
+                  <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                      <button class="btn btn-primary">Buy Now</button>
                     </div>
-               </div>
-          </section>
-          <section class=" mt-8">
-               <div class="grid grid-cols-2 gap-4 w-3/4 mx-auto">
-                    <div class="bg-cyan-500 p-8 rounded-xl ">
-                         <h1 class="text-2xl text-white mb-4">Your Deposit</h1>
-                         <input id="deposit-field" type="text" name="" class=" px-12 p-2 rounded-lg" placeholder="Enter Your Amount" >
-                         <button id="btn-Deposit" class="block bg-cyan-400 py-2 px-3 p-3 rounded-lg mt-4 text-white">Deposit</button>
-                    </div>
-                    <div class="bg-cyan-500 p-8 rounded-xl ">
-                         <h1 class="text-2xl text-white mb-4">Your Withdraw</h1>
-                         <input id="withdraw-field" type="text" name="" class=" px-12 p-2 rounded-lg" placeholder="Enter Your Amount">
-                         <button id="btn-withdraw" class="block bg-cyan-400 py-2 px-3 p-3 rounded-lg mt-4 text-white">Withdraw</button>
-                    </div>
-               </div>
-          </section>
-     </main>
-     
-     <script src="deposite.js"></script>
-     <script src="withdraw.js"></script>
-     <script src="utlitise.js"></script>
-     <script src="utlitise2.js"></script>
+                  </div>
+                </div>
+                  
+            </div>
+            <!-- area calculator -->
+            <div class=" taxt-4xl">area calculator</div>
+      </div>
+
+  </main>
+    
+
+    <script src="scripts/area-calculator.js"></script>
+    <script src="new.js"></script>
 </body>
+
 </html>
